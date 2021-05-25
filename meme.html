@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="meme.css">
+    <script src="meme.js" defer></script>
+    <script src="meme_edit.js" defer></script>
+    <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
+    <title>meme maker</title>
+</head>
+<body>
+    <div class="con">
+        <div class="meme-container">
+            <img src="./temp1.jpg" alt="img of the meme here." id="meme-img">
+        </div>
+        <div class="panel">
+            <div class="Add-img add-title" data-title="Add image:">
+                <input type="file" id="img">
+                <br><br>
+                (you can also edit the selected text here)
+                <br><br>
+                <label for="width-img" id="l-width-img">Width: 50%</label>
+                <input type="range" value="50" name="width-img" min="0" max="100" id="width-img">
+                <br><br>
+                <label for="height-img" id="l-height-img">Height: 50%</label>
+                <input type="range" value="50" name="height-img" min="0" max="100" id="height-img">
+                <br><br>
+                <label for="rotate-img" id="l-rotate-img">Rotate: 0deg</label>
+                <input type="range" value="0" name="rotate-img" min="0" max="360" id="rotate-img">
+                <br><br>
+                <button id="btn-add-img">Add image</button>
+                <button id="delete">Delete</button>
+            </div>
+            <div class="Add-text add-title" data-title="Text:">
+                <input type="text" id="text">
+                <button id="btn">Add text</button>
+                <br>
+                <br>
+                (you can also edit the selected text here)
+                <br>
+                <br>
+                <input type="text" id="text-edit">
+                <button id="btn-edit">edit text</button>
+                <br>
+                <br>
+                <label for="width" id="l-width">Width: 50%</label>
+                <input type="range" value="50" name="width" min="0" max="100" id="width">
+                <br>
+                <br>
+                <label for="fontsize">Font size: </label>
+                <input type="number" value="50" id="fontsize" name="fontsize">
+                <br>
+                <br>
+                <label for="color">color: </label>
+                <input type="color" name="color" id="color">
+                <br>
+                <br>
+                <label for="degree" id="l-degree">Rotate: 0deg</label>
+                <input type="range" value="0" name="degree" min="0" max="360" id="degree">
+                <br>
+                <br>
+                <button id="delete">Delete</button>
+            </div>
+            <div class="other-btn add-title" data-title="Other:">
+                <p style="margin: 7px 0;">(select template or background image)</p>
+                <input type="file" id="file-meme">
+                <br>
+                <br>
+                <button id="generate">Generate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
