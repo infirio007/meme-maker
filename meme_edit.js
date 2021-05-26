@@ -1,6 +1,17 @@
 const fileImg = document.querySelector("#img");
 const btn_add_img = document.querySelector("#btn-add-img");
 
+document.querySelector("#generate").onclick = () => {
+    html2canvas(memecon, {
+        onrendered: canvas  => {
+            var a = document.createElement("a");
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = "meme.jpg"
+            a.click();
+        }
+    });
+}
+
 width_img.oninput = () => {
     document.querySelector("#l-width-img").innerText = "Width: " + width_img.value + "%";
 }

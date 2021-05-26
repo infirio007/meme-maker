@@ -28,7 +28,7 @@
 }
 
 .meme-container {
-    border: 2px solid black;
+    border: 1px solid grey;
     overflow: hidden;
     display: flex;
     max-height: 95vh;

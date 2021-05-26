@@ -20,7 +20,6 @@ width.oninput = () => {
   document.querySelector("#l-width").innerText = "Width: " + width.value + "%";
 }
 
-
 rotate.oninput = () => {
   document.querySelector("#l-degree").innerText = "Rotate: " +rotate.value + "deg";
 }
@@ -31,11 +30,17 @@ memecon.addEventListener("click", e => {
   }
   tar_element = e.target;
   tar_element.style.outline = "2px solid black";
-  if(tar_element.tagName !== "IMG") {
+  if(tar_element.tagName !== "IMG" && tar_element.className !== "meme-container") {
     const btn_edit = document.querySelector("#btn-edit");
     const txt_edit = document.querySelector("#text-edit");
   
     txt_edit.value = tar_element.innerText;
+
+    width.value = (tar_element.style.width).replace("%", "");
+    document.querySelector("#l-width").innerText = "Width: " + width.value + "%";
+
+    rotate.value = (tar_element.style.transform).replace("rotate(", "").replace("deg)", "");
+    document.querySelector("#l-degree").innerText = "Rotate: " +rotate.value + "deg";
 
     width.oninput = () => {
       document.querySelector("#l-width").innerText = "Width: " + width.value + "%";
